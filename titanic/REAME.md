@@ -28,6 +28,8 @@ df = pd.read_csv('./train.csv')
 df.head()
 ```
 
+![df_head](/Users/unokun/work/ml/kaggle/titanic/df_head.png)
+
 
 
 #### 変数の説明
@@ -58,6 +60,8 @@ titanicタスクの場合、Survivalが目的変数、それ以外が説明変�
 df.describe()
 ```
 
+![df_describe](/Users/unokun/work/ml/kaggle/titanic/df_describe.png)
+
 
 
 ### データクレンジング
@@ -72,6 +76,8 @@ df.describe()
 # データの欠損有無
 df.isnull().sum()
 ```
+
+![df_isnull](/Users/unokun/work/ml/kaggle/titanic/df_isnull.png)
 
 
 
@@ -103,6 +109,8 @@ df = df.drop(['Cabin','Name','PassengerId','Ticket'],axis=1)
 df.corr()
 ```
 
+![df_corr](/Users/unokun/work/ml/kaggle/titanic/df_corr.png)
+
 
 
 #### データの可視化
@@ -113,6 +121,8 @@ df.corr()
 # データ可視化
 sns.countplot('Sex',hue='Survived',data=df)
 ```
+
+![sns_countplot](/Users/unokun/work/ml/kaggle/titanic/sns_countplot.png)
 
 
 
@@ -162,6 +172,8 @@ auc(fpr, tpr)
 accuracy_score(pred, test_y)
 ```
 
+![accuracy](/Users/unokun/work/ml/kaggle/titanic/accuracy.png)
+
 
 
 特徴量の影響度を調べます。
@@ -177,7 +189,7 @@ print('Pclass, Sex, Age, SibSp, Parch, Fare, Embarked')
 print(fti)
 ```
 
-
+![features_importance](/Users/unokun/work/ml/kaggle/titanic/features_importance.png)
 
 ### 参考
 
